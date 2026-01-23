@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel高效办公技巧大全 - 提升工作效率的必备指南</title>
+    <!-- 引入外部样式库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* 自定义样式 */
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* 头部样式 */
+        .header {
+            background: linear-gradient(135deg, #2c5364 0%, #203a43 50%, #0f2027 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 卡片样式 */
+        .tip-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tip-card .card-header {
+            background-color: #0f2027;
+            color: white;
+            border: none;
+        }
+        
+        /* 技巧列表样式 */
+        .skill-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: "\f00c";
+            font-family: "bootstrap-icons";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background-color: #203a43;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="bi bi-file-excel-fill"></i> Excel高效办公
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#basic">基础技巧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formula">函数公式</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shortcut">快捷键</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#case">实战案例</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="header text-center">
+        <div class="container">
+            <h1 class="mb-4">Excel高效办公技巧大全</h1>
+            <p class="lead mb-0">掌握这些技巧，让你的工作效率提升10倍</p>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 简介部分 -->
+        <section class="mb-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">为什么要学习Excel高效办公？</h2>
+                    <p class="text-muted">Excel是职场中最常用的办公软件之一，但大多数人只使用了其10%的功能。掌握高效办公技巧，不仅能节省大量工作时间，还能提升数据处理的准确性和专业性，成为职场中的核心竞争力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 基础技巧部分 -->
+        <section id="basic" class="mb-5">
+            <div class="card tip-card">
+                <div class="card-header">
+                    <h3 class="mb-0"><i class="bi bi-pencil-square me-2"></i>基础高效操作技巧</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="skill-list">
+                                <li>快速选中数据区域：Ctrl+Shift+方向键</li>
+                                <li>一键填充序列：选中单元格后拖动填充柄</li>
+                                <li>快速删除空行：筛选+定位空值+删除</li>
+                                <li>批量修改数据：查找替换（Ctrl+H）</li>
+                                <li>快速调整列宽：双击列标分隔线</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="skill-list">
+                                <li>数据快速求和：Alt+=（自动求和）</li>
+                                <li>批量合并单元格且保留内容</li>
+                                <li>快速切换工作表：Ctrl+PageUp/PageDown</li>
+                                <li>设置数据验证，限制输入内容</li>
+                                <li>使用条件格式突出显示重要数据</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 函数公式部分 -->
+        <section id="formula" class="mb-5">
+            <div class="card tip-card">
+                <div class="card-header">
+                    <h3 class="mb-0"><i class="bi bi-calculator me-2"></i>常用高效函数公式</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>函数名称</th>
+                                    <th>用途说明</th>
+                                    <th>示例公式</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>VLOOKUP</td>
+                                    <td>按列查找数据</td>
+                                    <td>=VLOOKUP(查找值, 数据区域, 返回列数, 匹配类型)</td>
+                                </tr>
+                                <tr>
+                                    <td>INDEX+MATCH</td>
+                                    <td>更灵活的查找（替代VLOOKUP）</td>
+                                    <td>=INDEX(返回区域,MATCH(查找值,查找区域,0))</td>
+                                </tr>
+                                <tr>
+                                    <td>SUMIF/SUMIFS</td>
+                                    <td>条件求和</td>
+                                    <td>=SUMIFS(求和区域, 条件区域1, 条件1, 条件区域2, 条件2)</td>
+                                </tr>
+                                <tr>
+                                    <td>IFERROR</td>
+                                    <td>错误值处理</td>
+                                    <td>=IFERROR(原公式, "错误时显示的内容")</td>
+                                </tr>
+                                <tr>
+                                    <td>TEXTJOIN</td>
+                                    <td>文本合并</td>
+                                    <td>=TEXTJOIN(",",TRUE,合并区域)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 快捷键部分 -->
+        <section id="shortcut" class="mb-5">
+            <div class="card tip-card">
+                <div class="card-header">
+                    <h3 class="mb-0"><i class="bi bi-keyboard me-2"></i>提升效率的快捷键</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <h5 class="text-primary">基础操作</h5>
+                            <ul class="skill-list">
+                                <li>撤销：Ctrl+Z</li>
+                                <li>重做：Ctrl+Y</li>
+                                <li>保存：Ctrl+S</li>
+                                <li>查找：Ctrl+F</li>
+                                <li>定位：Ctrl+G</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <h5 class="text-primary">格式设置</h5>
+                            <ul class="skill-list">
+                                <li>加粗：Ctrl+B</li>
+                                <li>斜体：Ctrl+I</li>
+                                <li>居中对齐：Ctrl+E</li>
+                                <li>数字格式：Ctrl+Shift+1</li>
+                                <li>货币格式：Ctrl+Shift+4</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <h5 class="text-primary">数据处理</h5>
+                            <ul class="skill-list">
+                                <li>筛选：Ctrl+Shift+L</li>
+                                <li>排序：Alt+D+S</li>
+                                <li>插入批注：Shift+F2</li>
+                                <li>选择性粘贴：Ctrl+Alt+V</li>
+                                <li>透视表：Alt+D+P</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实战案例部分 -->
+        <section id="case" class="mb-5">
+            <div class="card tip-card">
+                <div class="card-header">
+                    <h3 class="mb-0"><i class="bi bi-lightbulb me-2"></i>实战案例分享</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <h5>案例1：月度销售数据快速汇总</h5>
+                        <p>使用数据透视表+切片器，5分钟完成原本需要1小时的销售数据汇总分析，支持多维度筛选和动态更新。</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5>案例2：员工考勤自动统计</h5>
+                        <p>结合IF、COUNTIF、SUMIF函数，实现考勤数据自动计算，包括迟到、早退、旷工等情况的智能识别。</p>
+                    </div>
+                    <div>
+                        <h5>案例3：报表一键生成</h5>
+                        <p>使用Excel模板+定义名称+公式，实现基础数据录入后，各类报表一键生成，避免重复制作。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行动号召 -->
+        <section class="text-center py-5 bg-primary bg-opacity-10 rounded-3">
+            <h3 class="mb-3">开始你的Excel高效办公之旅</h3>
+            <p class="mb-4">每天学习一个技巧，30天后你的Excel水平将发生质的飞跃</p>
+            <button id="bookmarkBtn" class="btn btn-primary btn-lg">
+                <i class="bi bi-bookmark-check-fill me-2"></i>收藏本文，随时学习
+            </button>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5><i class="bi bi-file-excel-fill me-2"></i>Excel高效办公</h5>
+                    <p>专注分享实用的Excel技巧，助力职场人士提升工作效率</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2025 Excel高效办公 版权所有</p>
+                    <p>免责声明：本文内容仅供学习交流使用</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入JS库 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 页面加载完成后的动画效果
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.tip-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+
+        // 收藏功能
+        const bookmarkBtn = document.getElementById('bookmarkBtn');
+        
+        function toggleBookmark() {
+            const isBookmarked = localStorage.getItem('excelPageBookmarked') === 'true';
+            const newState = !isBookmarked;
+            localStorage.setItem('excelPageBookmarked', newState);
+            
+            if (newState) {
+                bookmarkBtn.innerHTML = '<i class="bi bi-bookmark-check-fill me-2"></i>已收藏';
+                bookmarkBtn.classList.remove('btn-primary');
+                bookmarkBtn.classList.add('btn-success');
+                showToast('收藏成功！按 Ctrl+D 快速访问');
+            } else {
+                bookmarkBtn.innerHTML = '<i class="bi bi-bookmark-check-fill me-2"></i>收藏本文，随时学习';
+                bookmarkBtn.classList.remove('btn-success');
+                bookmarkBtn.classList.add('btn-primary');
+                showToast('已取消收藏');
+            }
+        }
+
+        // 按钮点击事件
+        bookmarkBtn.addEventListener('click', toggleBookmark);
+
+        // 快捷键监听 (Ctrl+D)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'd') {
+                e.preventDefault();
+                toggleBookmark();
+            }
+        });
+
+        // 显示提示信息
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'position-fixed top-0 start-50 translate-middle-x mt-3 px-4 py-2 bg-dark text-white rounded shadow';
+            toast.style.zIndex = '9999';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // 页面加载时检查收藏状态
+        window.addEventListener('load', function() {
+            if (localStorage.getItem('excelPageBookmarked') === 'true') {
+                bookmarkBtn.innerHTML = '<i class="bi bi-bookmark-check-fill me-2"></i>已收藏';
+                bookmarkBtn.classList.remove('btn-primary');
+                bookmarkBtn.classList.add('btn-success');
+            }
+        });
+    </script>
+</body>
+</html>

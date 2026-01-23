@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加我的微信</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 页面背景 */
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 核心卡片容器 */
+        .wechat-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 40px 30px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* 标题样式 */
+        .wechat-card h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        /* 纯二维码图片样式 - 适配新的二维码尺寸 */
+        .qrcode-img {
+            width: 300px;
+            height: auto; /* 自动适配高度，保证二维码不变形 */
+            border-radius: 8px;
+            object-fit: contain; /* 完整显示二维码，不裁剪 */
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+
+        /* 提示文字样式 */
+        .tips {
+            color: #666;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wechat-card">
+        <h2>扫码添加我的微信</h2>
+        <!-- 替换为你最新提供的纯二维码图片URL -->
+        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/125883faf68d4b2ab1c6fdffc408e0f3.png~tplv-a9rns2rl98-image.png?lk3s=8e244e95&rcl=202601232155269F3BD64B12DC45093998&rrcfp=dafada99&x-expires=2085400526&x-signature=QPK%2FGuuVUAfwznA2nDt2ZDBk9FU%3D" 
+             alt="微信二维码" class="qrcode-img">
+        <p class="tips">微信扫码即可添加 ✨</p>
+    </div>
+</body>
+</html>

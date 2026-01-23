@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评论区示例（236条评论）</title>
+    <!-- 引入Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4096ff',
+                        secondary: '#f5f7fa',
+                        grayText: '#909399',
+                        authorReply: '#e8f4ff'
+                    },
+                    fontFamily: {
+                        sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .comment-card {
+                @apply bg-white rounded-lg p-4 mb-4 shadow-sm hover:shadow-md transition-shadow;
+            }
+            .avatar {
+                @apply w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg;
+            }
+            .user-name {
+                @apply font-medium text-base mr-2;
+            }
+            .user-fans {
+                @apply text-xs text-grayText bg-secondary px-2 py-0.5 rounded-full;
+            }
+            .publish-time {
+                @apply text-xs text-grayText ml-2;
+            }
+            .comment-content {
+                @apply mt-2 text-gray-800 leading-relaxed;
+            }
+            .author-reply {
+                @apply mt-2 p-3 bg-authorReply rounded-lg text-sm;
+            }
+            .interact-btn {
+                @apply flex items-center text-grayText hover:text-primary transition-colors;
+            }
+            .hot-comment-tag {
+                @apply text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full mr-2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+    <div class="max-w-2xl mx-auto">
+        <!-- 评论区标题 -->
+        <h2 class="text-xl font-bold text-gray-800 mb-6">全部评论（236条）</h2>
+        
+        <!-- 评论列表容器 -->
+        <div id="commentList" class="comment-list">
+            <!-- 热门评论（原有4条置顶） -->
+            <div class="mb-8">
+                <h3 class="text-lg font-medium text-gray-700 mb-4">热门评论</h3>
+                
+                <!-- 第一条热门评论 -->
+                <div class="comment-card">
+                    <div class="flex">
+                        <div class="avatar bg-blue-500 mr-4">李</div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center">
+                                <span class="hot-comment-tag">热门</span>
+                                <span class="user-name">李姐育儿</span>
+                                <span class="user-fans">粉丝2.3万</span>
+                                <span class="publish-time">2小时前 · 回复了作者</span>
+                            </div>
+                            <p class="comment-content">
+                                说得太对了！我邻居家孩子就是这样，毕业在家躺了3年，找工作挑三拣四，最后连外卖都不愿跑，父母急得头发都白了，真是越躺越废！
+                            </p>
+                            <div class="author-reply">
+                                <span class="font-medium text-primary">作者回复：</span>
+                                确实，早干预早省心！
+                            </div>
+                            <div class="mt-3 flex items-center gap-4">
+                                <button class="interact-btn">
+                                    <i class="fas fa-thumbs-up mr-1"></i>
+                                    <span>236</span>
+                                </button>
+                                <button class="interact-btn">
+                                    <i class="fas fa-reply mr-1"></i>
+                                    <span>回复</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第二条热门评论 -->
+                <div class="comment-card">
+                    <div class="flex">
+                        <div class="avatar bg-green-500 mr-4">张</div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center">
+                                <span class="hot-comment-tag">热门</span>
+                                <span class="user-name">老张谈教育</span>
+                                <span class="publish-time">1小时前</span>
+                            </div>
+                            <p class="comment-content">
+                                我家侄子就是眼高手低，创业怕亏，上班嫌累，最后被培训班骗了2万，现在还在家啃老，真是恨铁不成钢！家长们赶紧骂醒自家孩子！
+                            </p>
+                            <div class="mt-3 flex items-center gap-4">
+                                <button class="interact-btn">
+                                    <i class="fas fa-thumbs-up mr-1"></i>
+                                    <span>189</span>
+                                </button>
+                                <button class="interact-btn">
+                                    <i class="fas fa-reply mr-1"></i>
+                                    <span>回复</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第三条热门评论 -->
+                <div class="comment-card">
+                    <div class="flex">
+                        <div class="avatar bg-gray-500 mr-4">匿</div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center">
+                                <span class="hot-comment-tag">热门</span>
+                                <span class="user-name">匿名用户</span>
+                                <span class="publish-time">30分钟前</span>
+                            </div>
+                            <p class="comment-content">
+                                看完心里发慌，我家孩子刚毕业，也有点躺平，赶紧转发给他看，希望能骂醒他！
+                            </p>
+                            <div class="mt-3 flex items-center gap-4">
+                                <button class="interact-btn">
+                                    <i class="fas fa-thumbs-up mr-1"></i>
+                                    <span>96</span>
+                                </button>
+                                <button class="interact-btn">
+                                    <i class="fas fa-reply mr-1"></i>
+                                    <span>回复</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第四条热门评论 -->
+                <div class="comment-card">
+                    <div class="flex">
+                        <div class="avatar bg-orange-500 mr-4">杨</div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center">
+                                <span class="hot-comment-tag">热门</span>
+                                <span class="user-name">职场老杨</span>
+                                <span class="publish-time">45分钟前</span>
+                            </div>
+                            <p class="comment-content">
+                                也不能全怪孩子，现在就业确实难！我家孩子投了上百份简历，只收到2个面试，不是不想干，是真没机会啊...
+                            </p>
+                            <div class="mt-3 flex items-center gap-4">
+                                <button class="interact-btn">
+                                    <i class="fas fa-thumbs-up mr-1"></i>
+                                    <span>88</span>
+                                </button>
+                                <button class="interact-btn">
+                                    <i class="fas fa-reply mr-1"></i>
+                                    <span>回复</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 更多评论（动态生成232条，总计236条） -->
+            <h3 class="text-lg font-medium text-gray-700 mb-4">更多评论</h3>
+        </div>
+    </div>
+
+    <script>
+        // ************************* 评论生成配置 *************************
+        // 1. 正常评论模板（围绕核心主题）
+        const normalComments = [
+            "我家孩子毕业1年了，每天在家打游戏，说找工作没意思，真的快愁死了！",
+            "现在的年轻人抗压能力太差了，稍微受点委屈就不干了，哪像我们当年？",
+            "就业难是真的，但也不能躺平啊，先找个基础工作干着总比在家啃老强！",
+            "我亲戚家孩子考公考了3年，每次差一点，现在也不找工作，就死磕考公，父母都快急疯了。",
+            "不能只怪孩子，现在的工作要么工资低要么加班多，年轻人看不到希望才躺平的。",
+            "我家孩子刚找到工作，干了1个月就辞职了，说同事不好相处，真是没办法。",
+            "身边好多这样的例子，大学毕业在家待着，白天睡觉晚上玩手机，根本不考虑未来。",
+            "家长也有责任，从小太娇惯了，导致孩子吃不了苦，受不了委屈。",
+            "我觉得还是要引导，骂是没用的，得帮孩子找到自己想做的事，建立信心。",
+            "现在的培训班全是坑，骗钱不说，学完也找不到工作，坑了不少年轻人。",
+            "我家孩子宁愿送外卖都不愿进工厂，说工厂太束缚，其实送外卖也不稳定啊。",
+            "毕业即失业不是开玩笑的，我侄女985毕业，找了半年才找到一份普通的工作。",
+            "躺平久了真的会废掉，整个人都没精气神了，越闲越不想动。",
+            "有的孩子不是不想工作，是高不成低不就，好工作找不到，差工作不愿干。",
+            "我们当年毕业没挑的，有工作就干，现在的孩子选择多了，反而更迷茫了。",
+            "父母帮着找了几份工作，孩子都不去，说不是自己喜欢的，真是任性。",
+            "疫情后就业更难了，小企业倒闭多，岗位少，年轻人机会确实不多。",
+            "我邻居家孩子躺了5年，现在都不敢出门见人了，社交都成问题。",
+            "还是要让孩子早点独立，别总靠父母，不然永远长不大。",
+            "找工作不能挑，先积累经验，有了经验才能挑工作，年轻人不懂这个道理。"
+        ];
+
+        // 2. 灌水评论模板（无营养、简短）
+        const spamComments = [
+            "说得对！",
+            "顶一个！",
+            "路过～",
+            "666",
+            "支持楼主",
+            "确实如此",
+            "有道理",
+            "哈哈哈",
+            "一样一样",
+            "看看评论",
+            "太真实了",
+            "+1",
+            "没话说",
+            "刷个存在感",
+            "吃瓜群众"
+        ];
+
+        // 3. 用户昵称前缀（随机生成昵称）
+        const namePrefixes = ["王姐", "李哥", "张阿姨", "刘叔", "陈老师", "赵家长", "孙大爷", "周妈妈", "吴爸爸", "郑姐", "匿名用户", "育儿达人", "教育博主", "职场过来人", "过来人"];
+        const nameSuffixes = ["聊育儿", "谈教育", "说就业", "话人生", "聊家常", "分享经验", "吐槽一下", "有感而发"];
+
+        // 4. 发布时间模板（随机生成）
+        const timeTemplates = [
+            "1分钟前", "5分钟前", "10分钟前", "15分钟前", "20分钟前", "30分钟前",
+            "1小时前", "2小时前", "3小时前", "4小时前", "5小时前", "昨天", "2天前", "3天前"
+        ];
+
+        // 5. 头像背景色（随机）
+        const avatarColors = ["bg-blue-500", "bg-green-500", "bg-gray-500", "bg-orange-500", "bg-purple-500", "bg-pink-500", "bg-yellow-500", "bg-red-500"];
+
+        // ************************* 辅助函数 *************************
+        // 随机生成昵称
+        function getRandomName() {
+            const prefix = namePrefixes[Math.floor(Math.random() * namePrefixes.length)];
+            const suffix = Math.random() > 0.5 ? nameSuffixes[Math.floor(Math.random() * nameSuffixes.length)] : "";
+            // 部分用户加数字后缀，更真实
+            const num = Math.random() > 0.7 ? Math.floor(Math.random() * 99) : "";
+            return `${prefix}${suffix}${num}`;
+        }
+
+        // 随机生成点赞数（1-200之间）
+        function getRandomLikeCount() {
+            return Math.floor(Math.random() * 200) + 1;
+        }
+
+        // 随机获取评论内容（30%正常评论，70%灌水评论）
+        function getRandomCommentContent() {
+            // 核心修改：Math.random() > 0.3 表示70%概率返回灌水评论
+            if (Math.random() > 0.3) {
+                // 70% 灌水评论
+                return spamComments[Math.floor(Math.random() * spamComments.length)];
+            } else {
+                // 30% 正常评论
+                return normalComments[Math.floor(Math.random() * normalComments.length)];
+            }
+        }
+
+        // ************************* 生成评论 *************************
+        const commentList = document.getElementById("commentList");
+        // 需要生成232条（因为已有4条热门评论，总计236条）
+        const totalCommentsToGenerate = 232;
+
+        for (let i = 0; i < totalCommentsToGenerate; i++) {
+            // 随机获取数据
+            const name = getRandomName();
+            const time = timeTemplates[Math.floor(Math.random() * timeTemplates.length)];
+            const content = getRandomCommentContent();
+            const likeCount = getRandomLikeCount();
+            const avatarColor = avatarColors[Math.floor(Math.random() * avatarColors.length)];
+            // 头像文字（取昵称第一个字）
+            const avatarText = name.charAt(0);
+
+            // 构建评论HTML
+            const commentHTML = `
+                <div class="comment-card">
+                    <div class="flex">
+                        <div class="avatar ${avatarColor} mr-4">${avatarText}</div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center">
+                                <span class="user-name">${name}</span>
+                                <span class="publish-time">${time}</span>
+                            </div>
+                            <p class="comment-content">${content}</p>
+                            <div class="mt-3 flex items-center gap-4">
+                                <button class="interact-btn">
+                                    <i class="fas fa-thumbs-up mr-1"></i>
+                                    <span>${likeCount}</span>
+                                </button>
+                                <button class="interact-btn">
+                                    <i class="fas fa-reply mr-1"></i>
+                                    <span>回复</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 添加到页面
+            commentList.insertAdjacentHTML("beforeend", commentHTML);
+        }
+    </script>
+</body>
+</html>
